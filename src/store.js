@@ -2,12 +2,7 @@
 export const initialStore = () => {
   return {
     contactsArray: [],
-    singleContact: {
-      name: "",
-			email: "",
-			phone: "",
-			address: ""
-    }
+    singleContact: {}
   };
 };
 
@@ -25,7 +20,7 @@ export default function storeReducer(store, action = {}) {
 
   if (action.type == "set-single-contact") {
     console.log("im here again", action.payload)
-    
+
 
 
     return {

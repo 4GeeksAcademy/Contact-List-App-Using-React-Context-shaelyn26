@@ -44,7 +44,7 @@ export const Home = () => {
 
 // this is a GET request 
 	const getData = () => {
-		fetch("https://playground.4geeks.com/contact/agendas/shae/contacts")
+		fetch("https://playground.4geeks.com/contact/agendas/shaelyn")
 		.then((resp)=> {
 			console.log("resp: ", resp)
 			if(resp.ok == false){
@@ -82,7 +82,7 @@ export const Home = () => {
 					<Link to="/submit">
 					<button
 					onClick={()=>{
-						dispatch({ type:" set-single-contact", payload: contacts })
+						dispatch({ type:"set-single-contact", payload: contacts })
 						}}			
 						>
 						Edit</button>

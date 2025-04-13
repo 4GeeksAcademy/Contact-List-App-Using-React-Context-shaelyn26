@@ -27,7 +27,7 @@ export const ContactSubmit = () => {
                 "address": address
               })
 		}
-        fetch("https://playground.4geeks.com/contact/agendas/shae/contacts", option)
+        fetch("https://playground.4geeks.com/contact/agendas/shaelyn/contacts", option)
         .then((resp)=> resp.json())
         .then((data)=> console.log("contact created: ", data))
     }
@@ -57,6 +57,6 @@ export const ContactSubmit = () => {
         <input onChange={(e)=> setPhone(e.target.value)} value={phone} type="text" placeholder="phone"/>
         <input onChange={(e)=> setAddress(e.target.value)}value={address} type="text" placeholder="address"/>
         <button onClick={submitContact}> Submit </button>
-        <button onClick={updateContact(store.singleContact.id)}> Update </button>
+        <button onClick={()=>updateContact(store.singleContact.id)}> Update </button>
     </div>
 )};
