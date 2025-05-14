@@ -27,7 +27,7 @@ export const ContactSubmit = () => {
                 "address": address
               })
 		}
-        fetch("https://playground.4geeks.com/contact/agendas/shaelyn/contacts", option)
+        fetch("https://playground.4geeks.com/contact/agendas/shae/contacts", option)
         .then((resp)=> resp.json())
         .then((data)=> console.log("contact created: ", data))
     }

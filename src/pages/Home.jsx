@@ -25,8 +25,7 @@ export const Home = () => {
 			},
 	// the 'body' is where we get it from PostMan site
 			body: JSON.stringify({
-				"slug": "Shae",
-				"id": 0
+				"slug": "shae"
 			  })
 		}
 		fetch("https://playground.4geeks.com/contact/agendas/shae", option)
@@ -44,7 +43,7 @@ export const Home = () => {
 
 // this is a GET request 
 	const getData = () => {
-		fetch("https://playground.4geeks.com/contact/agendas/shaelyn")
+		fetch("https://playground.4geeks.com/contact/agendas/shae")
 		.then((resp)=> {
 			console.log("resp: ", resp)
 			if(resp.ok == false){
