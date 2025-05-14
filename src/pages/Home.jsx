@@ -66,6 +66,15 @@ export const Home = () => {
   console.log(store,"contact listttt" );
 // {/* <ContactCard contact = contact /> */} map the contacts
 	console.log(store.contactsArray, "im here !!!!")
+
+	const handleDelete = (id)=> {
+		fetch("https://playground.4geeks.com/contact/agendas/shae/contacts/"+id, {
+			method: "DELETE"
+		})
+		getData()
+
+	}
+
   return (
     <div className="text-center mt-5">
 		{/* {condition ? if true do this (this where we map if its true) : if not do this} */}
@@ -86,6 +95,10 @@ export const Home = () => {
 						>
 						Edit</button>
 					</Link>
+					
+					<button onClick={()=> handleDelete(contacts.id)}>
+						Delete Button 
+					</button>
 				</div>
 			)
 		}) 
