@@ -12,7 +12,7 @@ export const ContactSubmit = () => {
     const [email, setEmail]= useState(store.singleContact.email)
     const [phone, setPhone]= useState(store.singleContact.phone)
     const [address, setAddress]= useState(store.singleContact.address)
-    console.log("i've arrived", store)
+    // console.log("i've arrived", store)
     
     
     const submitContact = () => {
@@ -58,7 +58,7 @@ export const ContactSubmit = () => {
         <input onChange={(e)=> setEmail(e.target.value)} value={email} type="text" placeholder="email"/>
         <input onChange={(e)=> setPhone(e.target.value)} value={phone} type="text" placeholder="phone"/>
         <input onChange={(e)=> setAddress(e.target.value)}value={address} type="text" placeholder="address"/>
-        <button onClick={submitContact}> Submit </button>
-        <button onClick={()=>updateContact(store.singleContact.id)}> Update </button>
+        <button onClick={submitContact}> Save Contact</button>
+        <button onClick={()=>updateContact(store.singleContact.id)}> Update Contact </button>
     </div>
 )};
