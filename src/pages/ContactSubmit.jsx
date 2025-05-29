@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export const ContactSubmit = () => {
@@ -78,8 +79,10 @@ export const ContactSubmit = () => {
             </div>
             
             <div className="m-4 d-flex align-items-center gap-3">
+                <Link to="/">
                 <button onClick={submitContact} className="bg-info-subtle"> Save Contact</button>
                 <button onClick={() => updateContact(store.singleContact.id)} className="bg-info-subtle"> Update Contact </button>
+                </Link>
             </div>
         </div>
     )

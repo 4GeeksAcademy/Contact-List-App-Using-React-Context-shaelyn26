@@ -91,16 +91,16 @@ export const Home = () => {
 									<button
 										onClick={() => {
 											dispatch({ type: "set-single-contact", payload: contacts })
-										}} 
+										}}
 										className="bg-info-subtle"
 									>
 										Edit Contact</button>
 								</Link>
-
 								<button onClick={() => handleDelete(contacts.id)}
 									className="bg-info-subtle">
 									Delete Contact
 								</button>
+
 							</div>
 						)
 					})

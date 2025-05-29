@@ -11,12 +11,3 @@ export const ContactCard = (contact) =>{
     </div>
     )
 }
-
-// this page display the 'LIST OF CONTACTS' 
-// error; 
-// delete button has to be pressed 2x to function 
-
-// things to add/change;
-// 1.add icons for delete/edit button and display to the right of contact info
-// 2.add profile demo image (left side)
-// 3. fix 'add contact' page appearance
