@@ -53,9 +53,10 @@ export const ContactSubmit = () => {
         navigate("/")
     }
     return (
-        <div className="contact-info">
-            <h1 className="d-flex mx-auto">Add New Contact</h1>
-            
+        <div className="contact-info bg-success-subtle text-success-emphasis">
+            <h3 className="d-flex mx-auto ">Add New Contact</h3>
+            {/* ^needs to be centered.. keep working on this */}
+
             <div className="col-3 m-4">
                 <label className="m-2">Name</label>
                 <input onChange={(e) => setName(e.target.value)} value={name} type="text" placeholder="name" />
@@ -77,8 +78,8 @@ export const ContactSubmit = () => {
             </div>
             
             <div className="m-4 d-flex align-items-center gap-3">
-                <button onClick={submitContact}> Save Contact</button>
-                <button onClick={() => updateContact(store.singleContact.id)}> Update Contact </button>
+                <button onClick={submitContact} className="bg-info-subtle"> Save Contact</button>
+                <button onClick={() => updateContact(store.singleContact.id)} className="bg-info-subtle"> Update Contact </button>
             </div>
         </div>
     )

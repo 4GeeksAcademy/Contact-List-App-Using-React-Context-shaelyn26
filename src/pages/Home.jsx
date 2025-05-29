@@ -3,10 +3,6 @@ import React, { useState, useEffect } from "react";
 import { ContactCard } from "./ContactCard.jsx";
 import { Link } from "react-router-dom";
 import ReactDOM from 'react-dom'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
-
-// ReactDOM.render(element, document.body)
 
 
 export const Home = () => {
@@ -86,9 +82,7 @@ export const Home = () => {
 				store.contactsArray.map(
 					(contacts) => {
 						return (
-							<div className="m-3 bg-danger">
-								<h2>My Contact</h2>
-								{/* shows up on each contact separate bc of contacts mapping (lines 85-86) */}
+							<div className="m-3 bg-success-subtle text-success-emphasis">
 								<div>name: {contacts.name}</div>
 								<div>email: {contacts.email}</div>
 								<div>phone: {contacts.phone}</div>
@@ -97,15 +91,15 @@ export const Home = () => {
 									<button
 										onClick={() => {
 											dispatch({ type: "set-single-contact", payload: contacts })
-										}}
+										}} 
+										className="bg-info-subtle"
 									>
 										Edit Contact</button>
 								</Link>
 
-								<button onClick={() => handleDelete(contacts.id)}>
+								<button onClick={() => handleDelete(contacts.id)}
+									className="bg-info-subtle">
 									Delete Contact
-									{/* <FontAwesomeIcon icon="fa-solid fa-trash" />					 */}
-									{/* ^-- trying to add icon for delete button *attempted import at the top* */}
 								</button>
 							</div>
 						)

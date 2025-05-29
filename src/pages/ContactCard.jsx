@@ -13,9 +13,8 @@ export const ContactCard = (contact) =>{
 }
 
 // this page display the 'LIST OF CONTACTS' 
-// errors; 
-// 1. delete button has to be pressed 2x to function 
-// 2.only can have 2 contacts at a time, if attempt to edit a 3rd.. page goes to last contact made (the 2nd contact)
+// error; 
+// delete button has to be pressed 2x to function 
 
 // things to add/change;
 // 1.add icons for delete/edit button and display to the right of contact info
