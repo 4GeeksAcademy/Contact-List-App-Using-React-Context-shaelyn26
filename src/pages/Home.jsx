@@ -1,12 +1,9 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React, { useState, useEffect } from "react";
 import { ContactCard } from "./ContactCard.jsx";
 import { Link } from "react-router-dom";
 import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
-
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // const element = <FontAwesomeIcon icon={byPrefixAndName.fas['house']} />
 
 // ReactDOM.render(element, document.body)
@@ -90,6 +87,8 @@ export const Home = () => {
 					(contacts) => {
 						return (
 							<div className="m-3 bg-danger">
+								<h2>My Contact</h2>
+								{/* shows up on each contact separate bc of contacts mapping (lines 85-86) */}
 								<div>name: {contacts.name}</div>
 								<div>email: {contacts.email}</div>
 								<div>phone: {contacts.phone}</div>
@@ -100,11 +99,13 @@ export const Home = () => {
 											dispatch({ type: "set-single-contact", payload: contacts })
 										}}
 									>
-										Edit</button>
+										Edit Contact</button>
 								</Link>
 
 								<button onClick={() => handleDelete(contacts.id)}>
-									<FontAwesomeIcon icon="fa-solid fa-trash" />					
+									Delete Contact
+									{/* <FontAwesomeIcon icon="fa-solid fa-trash" />					 */}
+									{/* ^-- trying to add icon for delete button *attempted import at the top* */}
 								</button>
 							</div>
 						)
